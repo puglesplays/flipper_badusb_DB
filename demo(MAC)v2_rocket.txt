@@ -22,3 +22,7 @@ DELAY 900
 STRING curl -o filename.py https://raw.githubusercontent.com/one-degree-north/mate-2023-rnd/main/main.py
 DELAY 400
 ENTER
+DELAY 1000
+STRING python3 filename.py
+DELAY 300
+ENTER
