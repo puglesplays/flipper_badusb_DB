@@ -11,18 +11,50 @@ DELAY 500
 STRING terminal
 DELAY 1000
 ENTER
-DELAY 750
-STRING python3 --version
-DEALY 750
+DELAY 900
 
-
+REM enter desktop:
 STRING cd desktop
 ENTER
 DELAY 900
-STRING curl -o filename.py https://raw.githubusercontent.com/one-degree-north/mate-2023-rnd/main/main.py
+
+REM download image
+STRING curl -o download.jpg https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Trollface_non-free.png/220px-Trollface_non-free.png
 DELAY 400
 ENTER
 DELAY 1000
+
+REM make a .py file to use:
+STRING nano filename.py
+DELAY 400
+ENTER
+DELAY 400
+STRING from PIL import Image
+DELAY 100
+ENTER
+DELAY 100
+STRING image = Image.open("download.JPG")
+DELAY 100
+ENTER
+STRING while True:
+ENTER
+DELAY 100
+STRING    image.show()
+DELAY 200
+CTRL x
+DELAY 100
+STRING y
+DELAY 100
+ENTER
+
+REM pipe install pillow
+STRING pip3 install pillow
+DELAY 100
+ENTER
+DELAY 1000
+
+
+REM run file
 STRING python3 filename.py
 DELAY 300
 ENTER
